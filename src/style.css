@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(0, 180, 255, 0.25), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(150, 0, 255, 0.25), transparent 35%),
+    #050816;
+  color: #e8f6ff;
+  min-height: 100vh;
+}
+
+.bc-root {
+  min-height: 100vh;
+  padding: 40px;
+  background: radial-gradient(circle at top, #102a43, #050816);
+  color: #e8f6ff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.bc-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bc-header h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 18px #00eaff;
+}
+
+.bc-header p {
+  color: #9fbfd0;
+}
+
+.bc-card {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.12);
+}
+
+.bc-card-title {
+  margin-bottom: 20px;
+  color: #7df9ff;
+}
+
+.bc-field {
+  margin-bottom: 18px;
+}
+
+.bc-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #c7dce8;
+}
+
+.bc-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bc-input-row input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 1rem;
+}
+
+.bc-unit {
+  color: #00eaff;
+  font-weight: 600;
+}
+
+.bc-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.bc-pill {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 234, 255, 0.3);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.bc-pill input {
+  display: none;
+}
+
+.bc-pill--active {
+  background: linear-gradient(135deg, #00eaff, #7b2cff);
+  color: white;
+  box-shadow: 0 0 18px rgba(0, 234, 255, 0.5);
+}
+
+.bc-brake-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.bc-brake-grid label {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(0, 234, 255, 0.2);
+}
+
+.bc-brake-name {
+  margin-left: 8px;
+  font-weight: 700;
+  color: white;
+}
+
+.bc-brake-mu {
+  color: #9fbfd0;
+}
+
+button {
+  display: block;
+  margin: 24px auto;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #00eaff, #7b2cff);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.45);
+  transition: 0.5s ease;
+}
+
+button:hover {
+  transform: scale(1.04);
+}
+
+.bc-metrics {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bc-metric {
+  flex: 1;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.bc-metric-label,
+.bc-total-label {
+  color: #9fbfd0;
+}
+
+.bc-metric-value,
+.bc-total-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.bc-total {
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(0, 234, 255, 0.12);
+  border: 1px solid rgba(0, 234, 255, 0.35);
+}
+
+.bc-bars {
+  margin-top: 26px;
+}
+
+.bc-bar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 50px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.bc-bar-bg {
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.bc-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.bc-bar--reaction {
+  background: #00eaff;
+}
+
+.bc-bar--brake {
+  background: #7b2cff;
+}
+
+.bc-detail {
+  margin-top: 24px;
+}
+
+.bc-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 700px) {
+  .bc-root {
+    padding: 20px;
+  }
+
+  .bc-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .bc-bar-row {
+    grid-template-columns: 1fr;
+  }
+
+  .bc-detail-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
